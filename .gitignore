@@ -8,3 +8,15 @@ wheels/
 
 # Virtual environments
 .venv
+
+# build artifacts
+.DS_Store
+
+# data
+artifacts/spectrogram_batches/work/
+artifacts/spectrogram_batches/zips/
+data/birdclef-2026/
+birdclef-2026.zip
+
+# cursor
+.cursor/hooks/state
