@@ -1,0 +1,12 @@
+{
+  "unique_windows": 739,
+  "png_count": 739,
+  "skipped_existing_png_count": 0,
+  "error_count": 0,
+  "skipped_existing_zip": false,
+  "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/soundscape_spectrograms/zips/soundscapes.zip",
+  "zip_size_bytes": 22290726,
+  "index_csv_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/soundscape_spectrograms/work/soundscape_index.csv",
+  "sample_rate": 32000,
+  "window_seconds": 5
+}
