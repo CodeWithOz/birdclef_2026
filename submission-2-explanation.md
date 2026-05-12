@@ -33,23 +33,20 @@ problem as image classification.
 Here is what that conversion does:
 
 1. **Short-Time Fourier Transform (STFT)**: The audio waveform is sliced into
-   overlapping windows (~16 ms each). On each window we run an FFT to find
+  overlapping windows (~16 ms each). On each window we run an FFT to find
    which frequencies are present and how loud they are. The result is a 2D
    grid: time along the horizontal axis, frequency along the vertical axis,
    brightness = loudness at that frequency at that moment.
-
 2. **Mel frequency scale**: The raw FFT uses linearly-spaced frequencies, but
-   hearing (animal and human alike) is roughly logarithmic. We remap the
+  hearing (animal and human alike) is roughly logarithmic. We remap the
    frequency axis to the *mel scale*, which compresses high frequencies and
    expands low ones. This makes species-distinctive call patterns — which often
    occupy a narrow but characteristic pitch range — more visually prominent.
-
 3. **Decibels**: Loudness is converted to a log scale (decibels) so quiet
-   background sounds and loud calls coexist in the same image without the
+  background sounds and loud calls coexist in the same image without the
    loud sounds completely washing out the quiet ones.
-
 4. **Per-clip normalisation**: Each spectrogram is rescaled so its quietest
-   value maps to 0 and its loudest value maps to 255. This removes the effect
+  value maps to 0 and its loudest value maps to 255. This removes the effect
    of microphone gain and overall recording volume, so the model focuses on
    *relative* patterns rather than absolute loudness.
 
@@ -109,12 +106,11 @@ The key change vs. standard classification is in the **output layer and loss
 function**:
 
 - **Standard (single-label)**: the output passes through *softmax*, which
-  forces all 234 scores to sum to 1, treating them as a probability
-  distribution over mutually exclusive classes.
-
+forces all 234 scores to sum to 1, treating them as a probability
+distribution over mutually exclusive classes.
 - **Multi-label**: the output passes through *sigmoid* independently for each
-  of the 234 scores, producing 234 independent probabilities in [0, 1]. Each
-  class is treated as its own yes/no question.
+of the 234 scores, producing 234 independent probabilities in [0, 1]. Each
+class is treated as its own yes/no question.
 
 The loss function is **Binary Cross-Entropy (BCE)** summed across all 234
 classes. For each class *c* and each training example, BCE compares the
@@ -170,13 +166,12 @@ in both splits.
 
 Training proceeds in two stages:
 
-1. **`fine_tune(2)` — frozen backbone, 2 epochs**: The ResNet-50 backbone
-   weights are frozen (their gradients zeroed). Only the new 234-output head
+1. `**fine_tune(2)` — frozen backbone, 2 epochs**: The ResNet-50 backbone
+  weights are frozen (their gradients zeroed). Only the new 234-output head
    is trained. This quickly adapts the head to the new task without disrupting
    the general visual features the backbone already knows.
-
-2. **`fit_one_cycle(5)` — full network, 5 epochs**: All weights are unfrozen
-   and trained together for 5 epochs using the *1-cycle learning rate
+2. `**fit_one_cycle(5)` — full network, 5 epochs**: All weights are unfrozen
+  and trained together for 5 epochs using the *1-cycle learning rate
    schedule*. The learning rate starts low, rises to a peak in the middle of
    training, then falls back to a very low value. This approach often reaches
    better solutions than a fixed learning rate by allowing large updates early
@@ -220,32 +215,45 @@ We address this with a **sliding window at 50% overlap**:
 This gives ~23 overlapping clips per 1-minute file instead of 12.
 
 For each required submission row (every 5 seconds), we aggregate the
-predictions from the 2–3 overlapping clips that cover that window by taking
-the **maximum** predicted probability per class. Taking the max rather than
-the mean reflects the assumption that the model only needs to *detect* a
-species once in the window — a single well-aligned clip where the call is
-centred gives a confident prediction, and that confidence should win over
-clips where the call is clipped at the edge.
+predictions from the overlapping clips that have any overlap with that window
+by taking the **maximum** predicted probability per class.
+
+Any individual bird call at a specific moment in time falls inside exactly 2
+overlapping clips — that is the direct consequence of 50% overlap. But a
+5-second submission window is a *range*, not a point. The clips that have at
+least partial overlap with that range are:
+
+- The clip whose end falls in the first half of the window (covers the early
+  part).
+- The clip that is fully aligned with the window.
+- The clip whose start falls in the second half of the window (covers the
+  late part).
+
+That is up to 3 clips for interior windows. The first and last submission
+windows in a file are boundary cases: there is no clip before the first or
+after the last, so they are covered by only 2 clips. Interior windows are
+covered by 3.
+
+We include all clips with any overlap because we do not know in advance where
+in the window a call occurs. A call in the early half will be best captured
+by clips 1 and 2; a call in the late half by clips 2 and 3. Taking the max
+across all of them lets the best-aligned clip win regardless of call position.
 
 ### From spectrogram window to probability
 
 Each spectrogram window goes through:
 
 1. **Resize to 224×224** — matches the input size ResNet-50 was trained on.
-
 2. **Convert to RGB** — replicate the single greyscale channel three times.
-   ResNet-50 expects a 3-channel image; this satisfies that without any
+  ResNet-50 expects a 3-channel image; this satisfies that without any
    information loss.
-
 3. **ImageNet normalisation** — subtract the ImageNet mean and divide by the
-   ImageNet standard deviation, channel by channel. This keeps the input
+  ImageNet standard deviation, channel by channel. This keeps the input
    distribution consistent with what the backbone saw during its original
    ImageNet training.
-
 4. **ResNet-50 forward pass** — produces 234 raw scores (logits).
-
 5. **Sigmoid** — converts each logit to a probability in (0, 1). A logit of 0
-   → probability 0.5; a large positive logit → probability near 1; a large
+  → probability 0.5; a large positive logit → probability near 1; a large
    negative logit → probability near 0.
 
 These probabilities are written directly to `submission.csv`.
