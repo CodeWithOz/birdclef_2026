@@ -224,10 +224,10 @@ overlapping clips — that is the direct consequence of 50% overlap. But a
 least partial overlap with that range are:
 
 - The clip whose end falls in the first half of the window (covers the early
-  part).
+part).
 - The clip that is fully aligned with the window.
 - The clip whose start falls in the second half of the window (covers the
-  late part).
+late part).
 
 That is up to 3 clips for interior windows. The first and last submission
 windows in a file are boundary cases: there is no clip before the first or
