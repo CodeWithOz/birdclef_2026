@@ -201,13 +201,30 @@ This does not trigger a submission run.
 
 ---
 
+## Step 7b — Update model input in Kaggle UI (manual, required)
+
+This step cannot be automated and must be done by the user before submitting.
+
+In the Kaggle notebook UI:
+1. Open the submission notebook
+2. In the right sidebar under **Input**, find the current model source
+3. Remove the old model version and add the new one (the version number confirmed in Step 5)
+4. Confirm the sidebar now shows the correct version before proceeding
+
+**This is required even though the notebook cell path and kernel-metadata.json have
+already been updated.** For UI-triggered submission runs, Kaggle mounts whatever is
+registered in the sidebar — not what the metadata file specifies. Skipping this step
+will cause a FileNotFoundError at runtime.
+
+---
+
 ## Step 8 — Hand off
 
 Summarise what was completed:
 - Training run completed ✓
-- Model uploaded as `<owner>/<model-slug>/<framework>/<variation-slug>/<version>` ✓
+- Model uploaded as `<owner>/<model-slug>/PyTorch/<variation-slug>/<version>` ✓
 - Submission notebook updated and pushed ✓
-- Ready for manual submission in the Kaggle UI
+- Remind the user to complete Step 7b (update model input in Kaggle sidebar) before submitting
 
 Do not attempt to submit programmatically — code competition submission via the
 public API is not supported and will return 403.
