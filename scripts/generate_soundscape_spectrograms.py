@@ -210,7 +210,7 @@ def main() -> None:
                 if out_file.exists():
                     skipped_existing_png_count += 1
                 else:
-                    s = librosa.feature.melspectrogram(y=chunk, sr=sr)
+                    s = librosa.feature.melspectrogram(y=chunk, sr=sr, n_mels=128, fmin=50, fmax=14000, n_fft=1024, hop_length=320)
                     s_db = librosa.power_to_db(s, ref=np.max)
                     s_norm = normalize_to_uint8(s_db)
                     Image.fromarray(s_norm).resize(TARGET_SIZE).save(out_file)

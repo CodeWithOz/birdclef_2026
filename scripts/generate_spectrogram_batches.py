@@ -16,6 +16,7 @@ from tqdm import tqdm
 
 
 TARGET_SIZE = (224, 224)
+SAMPLE_RATE = 32000
 CLIP_DURATION_SECONDS = 5
 CHUNK_OFFSETS_SECONDS = (0.0, 2.5)
 
@@ -190,7 +191,7 @@ def main() -> None:
             species_dir.mkdir(parents=True, exist_ok=True)
 
             try:
-                samples, sample_rate = librosa.load(audio_path, sr=None)
+                samples, sample_rate = librosa.load(audio_path, sr=SAMPLE_RATE)
                 chunks = get_chunks(samples=samples, sample_rate=sample_rate)
 
                 stem = Path(row.filename).stem
@@ -200,7 +201,7 @@ def main() -> None:
                         skipped_existing_png_count += 1
                         continue
 
-                    s = librosa.feature.melspectrogram(y=chunk, sr=sample_rate)
+                    s = librosa.feature.melspectrogram(y=chunk, sr=SAMPLE_RATE, n_mels=128, fmin=50, fmax=14000, n_fft=1024, hop_length=320)
                     s_db = librosa.power_to_db(s, ref=np.max)
                     s_norm = normalize_to_uint8(s_db)
                     image = Image.fromarray(s_norm).resize(TARGET_SIZE)
