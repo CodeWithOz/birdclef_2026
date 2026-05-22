@@ -22,3 +22,6 @@ birdclef-2026.zip
 
 # cursor
 .cursor/hooks/state
+
+# temporary files
+tmp/
