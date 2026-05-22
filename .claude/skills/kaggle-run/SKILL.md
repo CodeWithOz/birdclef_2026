@@ -38,11 +38,14 @@ Before doing anything, ask the user **two questions** (can be asked together):
    - **New variation** = different architecture/approach → new training and submission
      notebook files were created and are already committed
 
-2. **Which notebook files?**
-   - Ask the user to confirm which training notebook and which submission notebook
-     correspond to this run. For a new version this will be the same pair as last
-     time; for a new variation it will be the newly created files.
-   - Also confirm which model variation slug the new output belongs to. For a new
+2. **Which notebook folder?**
+   - Notebooks live under `notebooks/<variation-folder>/` in the repo, where each
+     variation folder contains `training.ipynb`, `submission.ipynb`, and
+     `kernel-metadata.json` files for each notebook. Ask the user to confirm which
+     variation folder corresponds to this run (e.g. `notebooks/multilabel-234/`).
+     For a new version this will be the same folder as last time; for a new variation
+     it will be the newly created folder.
+   - Also confirm the model variation slug the new output belongs to. For a new
      version, this is the existing slug (e.g. `multilabel_234`). For a new variation,
      the user will name the new slug now — confirm it before proceeding.
 
@@ -52,10 +55,13 @@ Do not proceed until both questions are answered.
 
 ## Step 1 — Verify prerequisites
 
-Check that the following exist in the repo for both confirmed notebook files:
+Each variation has two subfolders under `notebooks/`: one for the training notebook
+and one for the submission notebook (e.g. `notebooks/multilabel-234/` and
+`notebooks/multilabel-234-submission/`). Check that the following exist in both
+confirmed folders:
 
-- The notebook `.ipynb` file itself
-- A `kernel-metadata.json` file in the same directory
+- The notebook `.ipynb` file (`training.ipynb` or `submission.ipynb`)
+- A `kernel-metadata.json` file
 
 If either metadata file is missing, stop and follow `references/kernel-metadata-setup.md`
 before continuing.
@@ -119,7 +125,7 @@ Confirm both expected files are present before continuing.
 ### If new VERSION:
 ```bash
 kaggle models variations versions create \
-  <owner>/<model-slug>/<framework>/<variation-slug> \
+  <owner>/<model-slug>/PyTorch/<variation-slug> \
   -p ./tmp/kaggle-output/ \
   -n "<brief description of what changed>"
 ```
@@ -141,7 +147,7 @@ Then create the first version of the new variation:
 
 ```bash
 kaggle models variations versions create \
-  <owner>/<model-slug>/<framework>/<new-variation-slug> \
+  <owner>/<model-slug>/PyTorch/<new-variation-slug> \
   -p ./tmp/kaggle-output/ \
   -n "Initial version"
 ```
@@ -162,8 +168,12 @@ structure — the reference may be:
 
 The Kaggle model path format is:
 ```
-/kaggle/input/models/{owner}/{model-slug}/{framework}/{variation-slug}/{version}/{filename}
+/kaggle/input/models/{owner}/{model-slug}/PyTorch/{variation-slug}/{version}/{filename}
 ```
+
+Note: Kaggle stores the framework as `PyTorch` (capital P, capital T) regardless
+of how it is specified at creation time. Use this casing when constructing or
+verifying path strings.
 
 Update `MODEL_PATH` and `VOCAB_PATH` to reflect the new version number (and new
 variation slug if applicable). If this is a new variation, also update any markdown
