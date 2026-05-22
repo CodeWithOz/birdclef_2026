@@ -32,9 +32,10 @@ This creates a template. Edit it before running the create command.
 - `ownerSlug`: the Kaggle username of the model owner
 - `modelSlug`: always `bird-clef-classifier` — do not change this when adding a
   new variation; it refers to the parent model, not the variation
-- `framework`: always `PyTorch` (capital P, capital T) — this is how Kaggle stores
-  and displays the framework for fastai/PyTorch models, as confirmed by existing
-  model metadata pulled from Kaggle
+- `framework`: always `PyTorch` (capital P, capital T) in the metadata file and
+  in CLI commands — this is how Kaggle identifies the model instance. Note this
+  differs from the mounted path in notebook code, which always uses lowercase
+  `pytorch` (see Step 6 of the skill)
 - `overview`: describe what architectural change this variation represents
 
 ## Variation slug
@@ -43,7 +44,7 @@ The variation slug is derived from the metadata and becomes a permanent part of 
 Kaggle model path:
 
 ```
-/kaggle/input/models/<owner>/bird-clef-classifier/PyTorch/<variation-slug>/<version>/
+/kaggle/input/models/<owner>/bird-clef-classifier/pytorch/<variation-slug>/<version>/
 ```
 
 Choose a slug that is:

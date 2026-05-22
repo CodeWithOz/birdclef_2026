@@ -174,12 +174,14 @@ structure — the reference may be:
 
 The Kaggle model path format is:
 ```
-/kaggle/input/models/{owner}/{model-slug}/PyTorch/{variation-slug}/{version}/{filename}
+/kaggle/input/models/{owner}/{model-slug}/pytorch/{variation-slug}/{version}/{filename}
 ```
 
-Note: Kaggle stores the framework as `PyTorch` (capital P, capital T) regardless
-of how it is specified at creation time. Use this casing when constructing or
-verifying path strings.
+Note: the framework segment in the mounted path is always lowercase `pytorch`,
+regardless of how Kaggle stores or displays the framework name internally. The
+`model_sources` field in `kernel-metadata.json` uses `PyTorch` (capital P, capital T)
+— that is correct and should not be changed. But the path string in the notebook
+code must use lowercase `pytorch`.
 
 Update `MODEL_PATH` and `VOCAB_PATH` to reflect the new version number (and new
 variation slug if applicable). If this is a new variation, also update any markdown
