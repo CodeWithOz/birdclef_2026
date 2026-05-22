@@ -112,7 +112,10 @@ kaggle kernels output <kernel-id> -p ./tmp/kaggle-output/
 Ensure `./tmp/` is in the repo's `.gitignore` — downloaded model files are large
 binary artifacts and must not be committed.
 
-Downloads all output files from the completed run into `./tmp/kaggle-output/`.
+Run this as a background task where possible so the agent is not blocked during
+the download. Use whatever backgrounding mechanism is appropriate for the runtime
+environment. Notify the user when the download completes or fails.
+
 Expected files: `model_multilabel_234.pkl` and `vocab.json` (or equivalent names
 for a new variation).
 
@@ -121,6 +124,9 @@ Confirm both expected files are present before continuing.
 ---
 
 ## Step 5 — Upload model to Kaggle
+
+Run the relevant command below as a background task where possible so the agent
+is not blocked during the upload. Notify the user when the upload completes or fails.
 
 ### If new VERSION:
 ```bash
