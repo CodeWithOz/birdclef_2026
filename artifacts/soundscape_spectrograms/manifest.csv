@@ -1,2 +1,2 @@
 unique_windows,png_count,skipped_existing_png_count,error_count,skipped_existing_zip,zip_path,zip_size_bytes,index_csv_path,sample_rate,window_seconds
-739,739,0,0,False,/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/soundscape_spectrograms/zips/soundscapes.zip,22290726,/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/soundscape_spectrograms/work/soundscape_index.csv,32000,5
+739,739,0,0,False,/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/soundscape_spectrograms/zips/soundscapes.zip,22756551,/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/soundscape_spectrograms/work/soundscape_index.csv,32000,5

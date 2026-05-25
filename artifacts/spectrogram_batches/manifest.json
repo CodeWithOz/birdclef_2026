@@ -7,10 +7,10 @@
     "species": "rubthr1|banana|fepowl|soulap1|houspa|coffal1|osprey|socfly1|compau|yeofly1",
     "image_count": 65497,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_001_rank_001-010.zip",
-    "zip_size_bytes": 1947030580,
+    "zip_size_bytes": 1972499517,
     "error_count": 0,
     "skipped_existing_png_count": 0,
-    "skipped_existing_zip": true
+    "skipped_existing_zip": false
   },
   {
     "batch_id": 2,
@@ -20,10 +20,10 @@
     "species": "bncfly|bobfly1|bbwduc|trsowl|whtdov|sobtyr1|roahaw|strcuc1|trokin|grekis",
     "image_count": 61157,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_002_rank_011-020.zip",
-    "zip_size_bytes": 1800019481,
+    "zip_size_bytes": 1826923969,
     "error_count": 0,
     "skipped_existing_png_count": 0,
-    "skipped_existing_zip": true
+    "skipped_existing_zip": false
   },
   {
     "batch_id": 3,
@@ -33,10 +33,10 @@
     "species": "saffin|greant1|greyel|brnowl|barant1|sofspi1|gycwor1|squcuc1|oliwoo1|limpki",
     "image_count": 49268,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_003_rank_021-030.zip",
-    "zip_size_bytes": 1468634342,
+    "zip_size_bytes": 1486988263,
     "error_count": 0,
     "skipped_existing_png_count": 0,
-    "skipped_existing_zip": true
+    "skipped_existing_zip": false
   },
   {
     "batch_id": 4,
@@ -46,10 +46,10 @@
     "species": "compot1|grasal3|linwoo1|eulfly1|swtman1|pirfly1|baffal1|pabspi1|rufhor2|smbani",
     "image_count": 44768,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_004_rank_031-040.zip",
-    "zip_size_bytes": 1328101132,
+    "zip_size_bytes": 1344767708,
     "error_count": 0,
     "skipped_existing_png_count": 0,
-    "skipped_existing_zip": true
+    "skipped_existing_zip": false
   },
   {
     "batch_id": 5,
@@ -59,10 +59,10 @@
     "species": "yebela1|varant1|saytan1|chbmoc1|crbthr1|rutjac1|masgna1|rufnig1|fusfly1|paltan1",
     "image_count": 40093,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_005_rank_041-050.zip",
-    "zip_size_bytes": 1200032840,
+    "zip_size_bytes": 1213781121,
     "error_count": 0,
     "skipped_existing_png_count": 0,
-    "skipped_existing_zip": true
+    "skipped_existing_zip": false
   },
   {
     "batch_id": 6,
@@ -72,10 +72,10 @@
     "species": "rumfly1|chobla1|whbwar2|yecpar|pvttyr1|spispi1|burowl|rinkin1|batbel1|sibtan2",
     "image_count": 28063,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_006_rank_051-060.zip",
-    "zip_size_bytes": 832553916,
+    "zip_size_bytes": 842884673,
     "error_count": 0,
     "skipped_existing_png_count": 0,
-    "skipped_existing_zip": true
+    "skipped_existing_zip": false
   },
   {
     "batch_id": 7,
@@ -85,7 +85,7 @@
     "species": "greela|shcfly1|stbwoo2|thlwre1|redjun|bufpar|spbant3|flawar1|undtin1|grfdov1",
     "image_count": 31452,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_007_rank_061-070.zip",
-    "zip_size_bytes": 936358243,
+    "zip_size_bytes": 947920864,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
@@ -98,7 +98,7 @@
     "species": "orwpar|bkcdon|epaori4|y00678|plcjay1|strowl1|sobcac1|rebscy1|244024|bunibi1",
     "image_count": 21102,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_008_rank_071-080.zip",
-    "zip_size_bytes": 630867293,
+    "zip_size_bytes": 639927160,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
@@ -111,7 +111,7 @@
     "species": "blheag1|bucmot4|baymac|scadov1|strher2|shtnig1|picpig2|rufgna3|souant1|gretho2",
     "image_count": 17226,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_009_rank_081-090.zip",
-    "zip_size_bytes": 510974518,
+    "zip_size_bytes": 517454815,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
@@ -124,7 +124,7 @@
     "species": "whiwoo1|phecuc1|toctou1|schpar1|larela1|tattin1|wesfie1|relser1|watjac1|wfwduc1",
     "image_count": 16558,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_010_rank_091-100.zip",
-    "zip_size_bytes": 492776586,
+    "zip_size_bytes": 499884864,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
@@ -137,7 +137,7 @@
     "species": "astcra1|greani1|recfin1|bucpar|brcmar1|camfli1|lesela1|chvcon1|plasla1|gilhum1",
     "image_count": 15364,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_011_rank_101-110.zip",
-    "zip_size_bytes": 459986857,
+    "zip_size_bytes": 464956182,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
@@ -150,7 +150,7 @@
     "species": "giwrai1|bkhpar|glteme1|litnig1|ashgre1|mabpar|whnjay1|litcuc2|scther1|souscr1",
     "image_count": 12316,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_012_rank_111-120.zip",
-    "zip_size_bytes": 369284645,
+    "zip_size_bytes": 372780033,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
@@ -163,7 +163,7 @@
     "species": "horscr1|ragmac1|shshaw|rivwar1|chacha1|ruftho1|ruftof1|swthum1|grhtan1|smbtin1",
     "image_count": 11268,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_013_rank_121-130.zip",
-    "zip_size_bytes": 335726687,
+    "zip_size_bytes": 340461091,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
@@ -176,7 +176,7 @@
     "species": "ruther1|fotfly|whwpic1|yehcar1|crebec1|orbtro3|fabwre1|purjay1|whbant2|magtan2",
     "image_count": 9265,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_014_rank_131-140.zip",
-    "zip_size_bytes": 276411505,
+    "zip_size_bytes": 280179704,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
@@ -189,7 +189,7 @@
     "species": "grepot1|blttit1|palhor3|sabspa1|pluibi1|ficman1|hyamac1|22973|magant1|whlspi1",
     "image_count": 9051,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_015_rank_141-150.zip",
-    "zip_size_bytes": 267158349,
+    "zip_size_bytes": 271195871,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
@@ -202,7 +202,7 @@
     "species": "blchaw1|rufcas2|bcwfin2|bafcur1|24279|65377|yecmac|47144|cibspi1|platyr1",
     "image_count": 5432,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_016_rank_151-160.zip",
-    "zip_size_bytes": 161160655,
+    "zip_size_bytes": 163475184,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
@@ -215,7 +215,7 @@
     "species": "22956|lesgrf1|326272|rufcac2|yebcar|25092|23158|65380|dwatin1|41970",
     "image_count": 2743,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_017_rank_161-170.zip",
-    "zip_size_bytes": 82325277,
+    "zip_size_bytes": 83358713,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
@@ -228,7 +228,7 @@
     "species": "24285|555146|nacnig1|ocecra1|43435|67107|1176823|1161364|24287|22983",
     "image_count": 1480,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_018_rank_171-180.zip",
-    "zip_size_bytes": 44012571,
+    "zip_size_bytes": 44577721,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
@@ -241,7 +241,7 @@
     "species": "74113|555145|22967|760266|22930|22961|22985|67252|1595929|23154",
     "image_count": 1120,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_019_rank_181-190.zip",
-    "zip_size_bytes": 34230047,
+    "zip_size_bytes": 34113498,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
@@ -254,7 +254,7 @@
     "species": "66971|738183|23176|25214|476521|555123|64898|74580|sptnig1|209233",
     "image_count": 376,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_020_rank_191-200.zip",
-    "zip_size_bytes": 11284860,
+    "zip_size_bytes": 11418362,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
@@ -267,7 +267,7 @@
     "species": "24321|70711|116570|23150|23724|516975",
     "image_count": 46,
     "zip_path": "/Users/ucheozoemena/01-projects/birdclef_2026/artifacts/spectrogram_batches/zips/batch_021_rank_201-206.zip",
-    "zip_size_bytes": 1356064,
+    "zip_size_bytes": 1374925,
     "error_count": 0,
     "skipped_existing_png_count": 0,
     "skipped_existing_zip": false
