@@ -1,0 +1,18 @@
+{
+  "id": "ucheozoemena/birdclef-2026-gen-species-v2-1",
+  "title": "BirdCLEF 2026 Generate Species V2 001-050",
+  "code_file": "training.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": ["birdclef-2026"],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python",
+  "machine_shape": "None"
+}
