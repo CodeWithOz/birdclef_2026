@@ -12,7 +12,7 @@
   "dataset_sources": [],
   "kernel_sources": [],
   "competition_sources": ["birdclef-2026"],
-  "model_sources": ["ucheozoemena/bird-clef-classifier/PyTorch/multilabel_234_v2/1"],
+  "model_sources": ["ucheozoemena/bird-clef-classifier/PyTorch/multilabel_234_v2/2"],
   "docker_image": "gcr.io/kaggle-images/python@sha256:c370a5ff133d162d17c2dca332b50f3e85c0b0ed1471ee18e98e3009eee80b08",
   "machine_shape": "None"
 }
