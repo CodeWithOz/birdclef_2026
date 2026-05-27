@@ -1,5 +1,5 @@
 {
-  "id": "ucheozoemena/birdclef-2026-pseudo-label-full",
+  "id": "ucheozoemena/birdclef-2026-pseudo-label-full-inference",
   "title": "BirdCLEF 2026 Pseudo-Label Full Inference",
   "code_file": "inference.ipynb",
   "language": "python",
