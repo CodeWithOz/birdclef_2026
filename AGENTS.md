@@ -9,6 +9,9 @@
 - V1 mel params (used by all best-performing models): `hop_length=512`, librosa defaults (`n_fft=2048`, `n_mels=128`, `fmin=0`).
 - The 0.792 solo baseline is ConvNeXt-Small (v5), trained on species-001-010 + species-011-090 + soundscape-spectrograms with v1 mel params.
 - Ensemble: ConvNeXt-Small (v5) + ECA-NFNet-L0 (v9), v1 mel params, temporal smoothing → 0.803.
+- V3 (ConvNeXt-Small + ~238K pseudo-labeled soundscape clips, confidence ≥ 0.5): solo → 0.805.
+- V3 + ECA-NFNet-L0 (v9) ensemble → 0.811.
+- V4 (ECA-NFNet-L0 + pseudo-labels, same data as V3): training in progress. Goal: V3+V4 ensemble.
 
 ## Kaggle Workflow Rules
 
