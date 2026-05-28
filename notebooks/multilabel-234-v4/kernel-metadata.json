@@ -1,0 +1,24 @@
+{
+  "id": "ucheozoemena/birdclef-2026-multilabel-234-v4",
+  "title": "BirdCLEF 2026 Multilabel 234 V4",
+  "code_file": "training.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": ["gpu"],
+  "dataset_sources": [
+    "ucheozoemena/soundscape-spectrograms",
+    "ucheozoemena/species-001-010",
+    "ucheozoemena/species-011-090",
+    "ucheozoemena/pseudo-labels-part1",
+    "ucheozoemena/pseudo-labels-part2"
+  ],
+  "kernel_sources": [],
+  "competition_sources": ["birdclef-2026"],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:c370a5ff133d162d17c2dca332b50f3e85c0b0ed1471ee18e98e3009eee80b08",
+  "machine_shape": "NvidiaTeslaT4"
+}
