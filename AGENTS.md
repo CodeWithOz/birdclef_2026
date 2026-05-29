@@ -47,3 +47,4 @@ _This section is updated whenever a new lesson is discovered. Any AI agent worki
 | 2026-05 | Kaggle auto-extracts dataset zips; `glob('*.zip')` finds nothing. Use `rglob` and a filename→path lookup instead. |
 | 2026-05 | `load_learner` does not auto-move models to GPU. After loading, always call `.model.to(device)` explicitly. |
 | 2026-05 | V2 mel params (hop=320, fmin=50, fmax=14000, n_fft=1024) consistently underperform V1 params. Stick to V1 for new runs unless explicitly testing a new mel config. |
+| 2026-05 | ECA-NFNet-L0 is ~2x slower per epoch than ConvNeXt-Small on T4. With 324K rows, `fit_one_cycle(5)` exceeds the 12h Kaggle limit — use `fit_one_cycle(3)` (5 total epochs with `fine_tune(2)`) for large datasets. |
