@@ -1,0 +1,19 @@
+{
+  "id": "ucheozoemena/birdclef-2026-pseudo-label-gen-part-2-r2",
+  "title": "BirdCLEF 2026 Pseudo-Label Gen Part 2 R2",
+  "code_file": "training.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "ucheozoemena/birdclef-2026-pseudo-label-full-inference-r2"
+  ],
+  "competition_sources": ["birdclef-2026"],
+  "model_sources": [],
+  "machine_shape": "None"
+}

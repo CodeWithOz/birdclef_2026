@@ -1,0 +1,20 @@
+{
+  "id": "ucheozoemena/birdclef-2026-pseudo-label-full-inference-r2",
+  "title": "BirdCLEF 2026 Pseudo-Label Full Inference R2",
+  "code_file": "inference.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": ["gpu"],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": ["birdclef-2026"],
+  "model_sources": [
+    "ucheozoemena/bird-clef-classifier/PyTorch/multilabel_234_v3/2",
+    "ucheozoemena/bird-clef-classifier/PyTorch/multilabel_234/9"
+  ],
+  "machine_shape": "NvidiaTeslaT4"
+}
