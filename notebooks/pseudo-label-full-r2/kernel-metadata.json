@@ -13,7 +13,8 @@
   "kernel_sources": [],
   "competition_sources": ["birdclef-2026"],
   "model_sources": [
-    "ucheozoemena/bird-clef-classifier/PyTorch/multilabel_234_v3/2"
+    "ucheozoemena/bird-clef-classifier/PyTorch/multilabel_234_v3/2",
+    "ucheozoemena/bird-clef-classifier/PyTorch/multilabel_234/9"
   ],
   "machine_shape": "NvidiaTeslaT4"
 }
