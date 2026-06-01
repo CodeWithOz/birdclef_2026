@@ -13,8 +13,8 @@
     "ucheozoemena/soundscape-spectrograms",
     "ucheozoemena/species-001-010",
     "ucheozoemena/species-011-090",
-    "ucheozoemena/pseudo-labels-part1",
-    "ucheozoemena/pseudo-labels-part2"
+    "ucheozoemena/pseudo-labels-part1-r2",
+    "ucheozoemena/pseudo-labels-part2-r2"
   ],
   "kernel_sources": [],
   "competition_sources": ["birdclef-2026"],
